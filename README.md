@@ -3,6 +3,7 @@
 Organization-wide files for [vivaui](https://github.com/vivaui).
 
 - [`profile/README.md`](profile/README.md) — the text shown on [github.com/vivaui](https://github.com/vivaui).
+- [`profile/README.zh-CN.md`](profile/README.zh-CN.md) — the same page in Simplified Chinese.
 
 Edit the profile through a pull request; the organization page updates when it
 merges to `main`. Images there use absolute raw URLs, because an organization

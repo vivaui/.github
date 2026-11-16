@@ -12,7 +12,7 @@ No WebView, no browser engine, no bundled runtime.
 
 [![Latest release](https://img.shields.io/github/v/release/vivaui/viva?style=flat-square&label=release&color=D7263D)](https://github.com/vivaui/viva/releases) [![Go version](https://img.shields.io/github/go-mod/go-version/vivaui/viva?style=flat-square&label=Go&logo=go&logoColor=white&color=00ADD8)](https://vivaui.dev/en/docs/getting-started/) [![License](https://img.shields.io/github/license/vivaui/viva?style=flat-square&label=license&color=D7263D)](https://github.com/vivaui/viva/blob/main/LICENSE) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Windows%20%7C%20Linux-57606a?style=flat-square)](#where-it-runs)
 
-[Website](https://vivaui.dev/en/) · [Documentation](https://vivaui.dev/en/docs/getting-started/) · [Components](https://vivaui.dev/en/components/) · [Showcase](https://vivaui.dev/en/showcase/) · [中文](https://vivaui.dev/zh/)
+[Website](https://vivaui.dev/en/) · [Documentation](https://vivaui.dev/en/docs/getting-started/) · [Components](https://vivaui.dev/en/components/) · [Showcase](https://vivaui.dev/en/showcase/) · [简体中文](https://github.com/vivaui/.github/blob/main/profile/README.zh-CN.md)
 
 </div>
 

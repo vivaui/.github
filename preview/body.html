@@ -1,0 +1,145 @@
+<div align="center" dir="auto">
+<themed-picture data-catalyst-inline="true"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vivaui/.github/main/profile/assets/viva-lockup-dark.svg">
+  <img src="https://raw.githubusercontent.com/vivaui/.github/main/profile/assets/viva-lockup.svg" alt="Viva" width="280">
+</picture></themed-picture>
+<h3 dir="auto">用 Go 写原生桌面应用。</h3>
+<p dir="auto">macOS 上 Cocoa + Metal · Windows 上 Win32 + Direct3D 11 · Linux 上 X11 + Vulkan。<br>
+没有 WebView，没有浏览器引擎，也没有捆绑的运行时。</p>
+<p dir="auto"><a href="https://github.com/vivaui/viva/releases"><img src="https://camo.githubusercontent.com/7cc477753f5bb51b4e2eecf24d3412d4755a505e1025935a429158e9d09468f1/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f7669766175692f766976613f7374796c653d666c61742d737175617265266c6162656c3d25453725383925383825453625394325414326636f6c6f723d443732363344" alt="最新版本" data-canonical-src="https://img.shields.io/github/v/release/vivaui/viva?style=flat-square&amp;label=%E7%89%88%E6%9C%AC&amp;color=D7263D" style="max-width: 100%;"></a> <a href="https://vivaui.dev/zh/docs/getting-started/" rel="nofollow"><img src="https://camo.githubusercontent.com/c2cd3d14b71e538b50a1018aa5b3fc5a674d39e599bc0d513e89484b635cf6d7/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f676f2d6d6f642f676f2d76657273696f6e2f7669766175692f766976613f7374796c653d666c61742d737175617265266c6162656c3d476f266c6f676f3d676f266c6f676f436f6c6f723d776869746526636f6c6f723d303041444438" alt="Go 版本" data-canonical-src="https://img.shields.io/github/go-mod/go-version/vivaui/viva?style=flat-square&amp;label=Go&amp;logo=go&amp;logoColor=white&amp;color=00ADD8" style="max-width: 100%;"></a> <a href="https://github.com/vivaui/viva/blob/main/LICENSE"><img src="https://camo.githubusercontent.com/39cffb2337e3b0256a858ddfe6dc365842da20f2fcf63cadb5b506c89e27ad1b/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f7669766175692f766976613f7374796c653d666c61742d737175617265266c6162656c3d25453825414525423825453525384625414625453825414625383126636f6c6f723d443732363344" alt="许可证" data-canonical-src="https://img.shields.io/github/license/vivaui/viva?style=flat-square&amp;label=%E8%AE%B8%E5%8F%AF%E8%AF%81&amp;color=D7263D" style="max-width: 100%;"></a> <a href="#%E8%83%BD%E5%9C%A8%E5%93%AA%E9%87%8C%E8%BF%90%E8%A1%8C"><img src="https://camo.githubusercontent.com/e27a3bb4e023706cdaa58bf7f5fadbd3d797faf920a0b477d0784db2fba91d8d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d732d6d61634f5325323025374325323057696e646f77732532302537432532304c696e75782d3537363036613f7374796c653d666c61742d737175617265" alt="平台" data-canonical-src="https://img.shields.io/badge/platforms-macOS%20%7C%20Windows%20%7C%20Linux-57606a?style=flat-square" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://vivaui.dev/zh/" rel="nofollow">官网</a> · <a href="https://vivaui.dev/zh/docs/getting-started/" rel="nofollow">文档</a> · <a href="https://vivaui.dev/zh/components/" rel="nofollow">组件</a> · <a href="https://vivaui.dev/zh/showcase/" rel="nofollow">案例</a> · <a href="https://github.com/vivaui/.github/blob/main/profile/README.md">English</a></p>
+</div>
+<hr>
+<p dir="auto">Viva 是面向原生桌面应用的 Go 框架。它直接通过各操作系统自己的接口和 GPU 绘制窗口、文字与组件，所以应用只链接系统框架和 Go 运行时，别无其他。空闲时完全不做事。</p>
+<p align="center" dir="auto">
+  <b>1.6 MiB</b> 剥离后的可执行文件  ·  <b>0</b> 空闲时的 GPU 提交  ·  <b>0.0%</b> 空闲 CPU<br>
+  <sub>在 M0 Mac 上实测。每个数字都引自仓库里的报告——<a href="https://vivaui.dev/zh/docs/performance/" rel="nofollow">你可以自己重新跑一遍</a>。</sub>
+</p>
+<h2 dir="auto">围绕什么构建</h2>
+<markdown-accessiblity-table><table role="table">
+<tbody><tr>
+<td width="50%" valign="top">
+<b>原生，不是浏览器</b><br>
+<sub>macOS 调用 Cocoa 与 Metal，Windows 调用 Win32 与 Direct3D 11，Linux 调用系统自带的 XCB 与 Vulkan 库。没有 WebView，也不捆绑渲染器。</sub>
+</td>
+<td width="50%" valign="top">
+<b>空闲就是空闲</b><br>
+<sub>未变化的一帧不做布局、不重建场景、不向 GPU 提交任何东西。没有后台定时器，也没有轮询。</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<b>组件归你所有</b><br>
+<sub><code class="notranslate">viva add</code> 把组件的 Go 源码复制进你的项目。没有组件注册表，运行时也没有样式表解析器——就是你可以随意修改的 Go 代码。</sub>
+</td>
+<td width="50%" valign="top">
+<b>无需窗口即可测试</b><br>
+<sub>无头驱动用显式调用运行真实的绘制器、输入路由和焦点规则，测试不需要桌面会话。</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<b>一套 API，三个原生后端</b><br>
+<sub>在 macOS、Windows 和 Linux 上拥有相同的组件、输入、文字与无障碍语义。</sub>
+</td>
+<td width="50%" valign="top">
+<b>实测，可复现</b><br>
+<sub>二进制体积、空闲开销和场景耗时都引自标明机器与构建的基准报告。</sub>
+</td>
+</tr>
+</tbody></table></markdown-accessiblity-table>
+<h2 dir="auto">快速开始</h2>
+<div class="highlight highlight-source-shell" dir="auto"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> macOS / Linux</span>
+brew install vivaui/tap/viva
+
+<span class="pl-c"><span class="pl-c">#</span> Windows</span>
+scoop bucket add vivaui https://github.com/vivaui/homebrew-tap
+scoop install viva
+
+viva doctor       <span class="pl-c"><span class="pl-c">#</span> 这台机器准备好了吗？</span>
+viva init hello   <span class="pl-c"><span class="pl-c">#</span> 一个可直接运行的项目，含窗口与测试</span>
+<span class="pl-c1">cd</span> hello <span class="pl-k">&amp;&amp;</span> viva dev <span class="pl-c1">.</span>   <span class="pl-c"><span class="pl-c">#</span> 热重载：保存文件，窗口保留状态</span></pre></div>
+<p dir="auto"><sub>预编译压缩包（带 <code class="notranslate">SHA256SUMS</code>）在每个发布的 <a href="https://github.com/vivaui/viva/releases">releases 页面</a>。需要 Go 1.26 或更新版本；机器上没有时，<code class="notranslate">viva</code> 会下载一次工具链。</sub></p>
+<h2 dir="auto">用 Go 写一个窗口</h2>
+<div class="highlight highlight-source-go" dir="auto"><pre class="notranslate"><span class="pl-k">package</span> main
+
+<span class="pl-k">import</span> (
+	<span class="pl-s">"fmt"</span>
+	<span class="pl-s">"log"</span>
+
+	<span class="pl-s">"github.com/vivaui/viva/app"</span>
+	<span class="pl-s">"github.com/vivaui/viva/ui"</span>
+)
+
+<span class="pl-k">type</span> <span class="pl-smi">model</span> <span class="pl-k">struct</span> {
+	<span class="pl-c1">clicks</span> <span class="pl-smi">int</span>
+}
+
+<span class="pl-c">// page 声明窗口的内容。每次重绘都会运行它并读取 model；</span>
+<span class="pl-c">// 点击会修改 model，随后的一次重绘把结果显示出来。</span>
+<span class="pl-k">func</span> (<span class="pl-s1">m</span> <span class="pl-c1">*</span><span class="pl-smi">model</span>) <span class="pl-c1">page</span>(<span class="pl-s1">c</span> ui.<span class="pl-smi">C</span>) {
+	<span class="pl-s1">ui</span>.<span class="pl-c1">Column</span>(<span class="pl-s1">c</span>).<span class="pl-c1">Fill</span>().<span class="pl-c1">Pad</span>(<span class="pl-c1">24</span>).<span class="pl-c1">Gap</span>(<span class="pl-c1">12</span>).<span class="pl-c1">Children</span>(<span class="pl-k">func</span>() {
+		<span class="pl-k">if</span> <span class="pl-s1">ui</span>.<span class="pl-c1">Button</span>(<span class="pl-s1">c</span>, <span class="pl-s1">fmt</span>.<span class="pl-c1">Sprintf</span>(<span class="pl-s">"Clicked %d times"</span>, <span class="pl-s1">m</span>.<span class="pl-c1">clicks</span>)).<span class="pl-c1">Clicked</span>() {
+			<span class="pl-s1">m</span>.<span class="pl-c1">clicks</span><span class="pl-c1">++</span>
+		}
+	})
+}
+
+<span class="pl-k">func</span> <span class="pl-s1">main</span>() {
+	<span class="pl-s1">m</span> <span class="pl-c1">:=</span> <span class="pl-c1">&amp;</span><span class="pl-smi">model</span>{}
+	<span class="pl-k">if</span> <span class="pl-s1">err</span> <span class="pl-c1">:=</span> <span class="pl-s1">ui</span>.<span class="pl-c1">Run</span>(app.<span class="pl-smi">Config</span>{<span class="pl-s1">Title</span>: <span class="pl-s">"Hello"</span>, <span class="pl-s1">Width</span>: <span class="pl-c1">480</span>, <span class="pl-s1">Height</span>: <span class="pl-c1">240</span>}, <span class="pl-s1">m</span>.<span class="pl-c1">page</span>); <span class="pl-s1">err</span> <span class="pl-c1">!=</span> <span class="pl-c1">nil</span> {
+		<span class="pl-s1">log</span>.<span class="pl-c1">Fatal</span>(<span class="pl-s1">err</span>)
+	}
+}</pre></div>
+<p dir="auto">状态归你所有，布局是状态的一个函数，没有需要同步的坐标。没有变化时，什么都不运行。<a href="https://vivaui.dev/zh/docs/getting-started/" rel="nofollow">阅读指南 →</a></p>
+<h2 dir="auto">用 Viva 构建</h2>
+<markdown-accessiblity-table><table role="table">
+<tbody><tr>
+<td width="50%">
+<a href="https://motty.page" rel="nofollow"><img src="https://raw.githubusercontent.com/vivaui/.github/main/profile/assets/motty-hero.webp" alt="Motty：文件面板、SSH 终端与 AI 助手并排" width="100%" style="max-width: 100%;"></a>
+</td>
+<td width="50%">
+<a href="https://github.com/talongao/tinglan"><img src="https://raw.githubusercontent.com/vivaui/.github/main/profile/assets/tinglan-hero.webp" alt="听澜：左侧是专辑封面，右侧是粤语歌词与音译" width="100%" style="max-width: 100%;"></a>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<b>Motty</b> — 原生 SSH 工作台<br>
+<sub>终端、SFTP、端口转发、远程桌面和 AI 助手在同一个窗口里。<br>macOS · Windows · Linux</sub>
+</td>
+<td align="center" valign="top">
+<b>听澜（Tinglan）</b> — 非官方的华为音乐客户端<br>
+<sub>音乐库、歌单与歌词都在原生窗口里，12 款主题。<br>macOS</sub>
+</td>
+</tr>
+</tbody></table></markdown-accessiblity-table>
+<h2 dir="auto">仓库</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th align="left">仓库</th>
+<th align="left">是什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://github.com/vivaui/viva"><strong>viva</strong></a></td>
+<td align="left">框架、组件和 <code class="notranslate">viva</code> 命令。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/vivaui/awesome-viva"><strong>awesome-viva</strong></a></td>
+<td align="left">精选的应用、工具与资源列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/vivaui/homebrew-tap"><strong>homebrew-tap</strong></a></td>
+<td align="left"><code class="notranslate">viva</code> 的 Homebrew formula 与 Scoop manifest。</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2 dir="auto">能在哪里运行</h2>
+<p dir="auto">macOS（Cocoa · Metal · CoreText）· Windows（Win32 · Direct3D 11 · DirectWrite）· Linux（X11 · Vulkan · Pango/Cairo）——另有可选的 WebAssembly 目标，在浏览器里预览同一套组件，不进入桌面运行时。</p>
+<p dir="auto"><a href="https://vivaui.dev/zh/docs/platforms/" rel="nofollow">平台详情</a> · <a href="https://vivaui.dev/zh/docs/performance/" rel="nofollow">性能</a></p>
+<hr>
+<p align="center" dir="auto">
+  <sub>Viva 以 Apache-2.0 许可发布。截图权利归各自应用所有。</sub>
+</p>

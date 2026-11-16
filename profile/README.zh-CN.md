@@ -10,7 +10,7 @@
 macOS 上 Cocoa + Metal · Windows 上 Win32 + Direct3D 11 · Linux 上 X11 + Vulkan。  
 没有 WebView，没有浏览器引擎，也没有捆绑的运行时。
 
-[![最新版本](https://img.shields.io/github/v/release/vivaui/viva?style=flat-square&label=%E7%89%88%E6%9C%AC&color=D7263D)](https://github.com/vivaui/viva/releases) [![Go 版本](https://img.shields.io/github/go-mod/go-version/vivaui/viva?style=flat-square&label=Go&logo=go&logoColor=white&color=00ADD8)](https://vivaui.dev/zh/docs/getting-started/) [![许可证](https://img.shields.io/github/license/vivaui/viva?style=flat-square&label=%E8%AE%B8%E5%8F%AF%E8%AF%81&color=D7263D)](https://github.com/vivaui/viva/blob/main/LICENSE) [![平台](https://img.shields.io/badge/platforms-macOS%20%7C%20Windows%20%7C%20Linux-57606a?style=flat-square)](#%E8%83%BD%E5%9C%A8%E5%93%AA%E9%87%8C%E8%BF%90%E8%A1%8C)
+[![最新版本](https://img.shields.io/github/v/release/vivaui/viva?style=flat-square&label=%E7%89%88%E6%9C%AC&color=D7263D)](https://github.com/vivaui/viva/releases) [![Go 版本](https://img.shields.io/github/go-mod/go-version/vivaui/viva?style=flat-square&label=Go&logo=go&logoColor=white&color=00ADD8)](https://vivaui.dev/zh/docs/getting-started/) [![许可证](https://img.shields.io/github/license/vivaui/viva?style=flat-square&label=%E8%AE%B8%E5%8F%AF%E8%AF%81&color=D7263D)](https://github.com/vivaui/viva/blob/main/LICENSE) [![平台](https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-macOS%20%7C%20Windows%20%7C%20Linux-57606a?style=flat-square)](#%E8%83%BD%E5%9C%A8%E5%93%AA%E9%87%8C%E8%BF%90%E8%A1%8C)
 
 [官网](https://vivaui.dev/zh/) · [文档](https://vivaui.dev/zh/docs/getting-started/) · [组件](https://vivaui.dev/zh/components/) · [案例](https://vivaui.dev/zh/showcase/) · [English](https://github.com/vivaui/.github/blob/main/profile/README.md)
 

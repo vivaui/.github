@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vivaui/viva/main/website/src/assets/viva-lockup-dark.svg">
-  <img src="https://raw.githubusercontent.com/vivaui/viva/main/website/src/assets/viva-lockup.svg" alt="Viva" width="280">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vivaui/.github/main/profile/assets/viva-lockup-dark.svg">
+  <img src="https://raw.githubusercontent.com/vivaui/.github/main/profile/assets/viva-lockup.svg" alt="Viva" width="280">
 </picture>
 
 ### Native desktop applications, written in Go.
@@ -119,10 +119,10 @@ The state is yours, the layout is a function of it, and there are no coordinates
 <table>
 <tr>
 <td width="50%">
-<a href="https://motty.page"><img src="https://raw.githubusercontent.com/vivaui/viva/main/website/src/assets/showcase/motty-hero.webp" alt="Motty: a file panel, an SSH terminal and an AI assistant side by side" width="100%"></a>
+<a href="https://motty.page"><img src="https://raw.githubusercontent.com/vivaui/.github/main/profile/assets/motty-hero.webp" alt="Motty: a file panel, an SSH terminal and an AI assistant side by side" width="100%"></a>
 </td>
 <td width="50%">
-<a href="https://github.com/talongao/tinglan"><img src="https://raw.githubusercontent.com/vivaui/viva/main/website/src/assets/showcase/tinglan-hero.webp" alt="Tinglan: album art beside Cantonese lyrics with transliteration" width="100%"></a>
+<a href="https://github.com/talongao/tinglan"><img src="https://raw.githubusercontent.com/vivaui/.github/main/profile/assets/tinglan-hero.webp" alt="Tinglan: album art beside Cantonese lyrics with transliteration" width="100%"></a>
 </td>
 </tr>
 <tr>
